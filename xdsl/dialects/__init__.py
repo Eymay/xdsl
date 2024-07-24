@@ -171,6 +171,11 @@ def get_all_dialects() -> dict[str, Callable[[], Dialect]]:
 
         return PDL
 
+    def get_polynomial():
+        from xdsl.dialects.polynomial import Polynomial
+
+        return Polynomial
+
     def get_printf():
         from xdsl.dialects.printf import Printf
 
@@ -325,6 +330,7 @@ def get_all_dialects() -> dict[str, Callable[[], Dialect]]:
         "omp": get_omp,
         "onnx": get_onnx,
         "pdl": get_pdl,
+        "polynomial": get_polynomial,
         "printf": get_printf,
         "quantum": get_quantum,
         "qref": get_qref,
